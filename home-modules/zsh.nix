@@ -52,6 +52,7 @@
       pk = "pokemon-colorscripts -r --no-title";
       pkk = "pokemon-colorscripts -n";
       nis = "sudo nixos-rebuild switch"; 
+      nisf = "sudo nixos-rebuild switch --flake ."; 
       nit = "sudo nixos-rebuild test"; 
     };
 

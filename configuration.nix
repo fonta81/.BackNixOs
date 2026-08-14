@@ -157,6 +157,22 @@ in
   system.stateVersion = "26.05"; # Did you read the comment?
 
   # MIS CONFIG mateo
+
+  # flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Fin flakes
+
+  # nixvim
+  programs.nixvim = {
+
+  enable = true;
+  colorschemes.catppuccin.enable = true;
+  plugins.lualine.enable = true;
+  plugins.treesitter.enable = true;
+
+  };
+  # Fin nixvim
+
   # iniciar zsh
   programs.zsh.enable = true;
   # Fin iniciar zsh
