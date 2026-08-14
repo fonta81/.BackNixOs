@@ -50,7 +50,7 @@
       nz = "sudo nvim /etc/nixos/home-modules/zsh.nix"; 
       n = "nvim";
       pk = "pokemon-colorscripts -r --no-title";
-      pkk = "pokemon-colorscripts -n";
+      pkk = "clear && pokemon-colorscripts --no-title -n ";
       #NixOs
       nis = "sudo nixos-rebuild switch"; 
       nisf = "sudo nixos-rebuild switch --flake ."; 
