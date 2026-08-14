@@ -101,16 +101,6 @@ in
     #  thunderbird
     ];
   };
-  # zsh
-  programs.zsh = {
-  enable = true;
-  shellAliases = {
-  c="clear";
-  ni="cd /etc/nixos/";
-  n="nvim";
-  };
-  };
-  # Fin zsh
 
 
 
@@ -166,26 +156,15 @@ in
   system.stateVersion = "26.05"; # Did you read the comment?
 
   # MIS CONFIG mateo
-
-  #enble nvidia Mateo
-  # hardware.graphics = {
-  # enable = true;
-  # enable32Bit = true;
-  # };
-  #
-  # services.xserver.videoDrivers = [ "nvidia" ];
-  #
-  # hardware.nvidia = {
-  # open = true; 
-  # modesetting.enable = true;
-  # nvidiaSettings = true;
-  # };
-  # Fin nvidia Mateo
+  # iniciar zsh
+  programs.zsh.enable = true;
+  # Fin iniciar zsh
 
   # home-manager
   home-manager.users.mteo = import ./home.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
+  home-manager.backupFileExtension = "backup";
   # Fin home-manager
 
 
