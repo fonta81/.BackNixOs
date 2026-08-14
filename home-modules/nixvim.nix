@@ -66,7 +66,7 @@
       telescope.enable = true;
 
       # Parejas automáticas de paréntesis y comillas
-      auto-pairs.enable = true;
+      nvim-autopairs.enable = true;
 
       # Comentarios rápidos con "gcc" o "gc"
       comment.enable = true;
