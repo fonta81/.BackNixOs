@@ -3,17 +3,11 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-# mateo
-let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-in
-# fin mateo
 
 {
   imports = [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      "${home-manager}/nixos"
       ./system/nvidia.nix
     ];
 

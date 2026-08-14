@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # home.stateVersion = "26.05";
-  # home.username = "mteo";
-  # home.homeDirectory = "/home/mteo";
+  home.stateVersion = "26.05";
+  home.username = "mteo";
+  home.homeDirectory = "/home/mteo";
 
   imports = [
   ./home-modules/git.nix

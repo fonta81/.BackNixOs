@@ -33,7 +33,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.s = import ./home.nix;
+            home-manager.users.mteo = import ./home.nix;
           }
         ];
       };
