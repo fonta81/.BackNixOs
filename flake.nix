@@ -25,10 +25,9 @@
           ./hardware-configuration.nix
           ./configuration.nix
           
-          # Habilitar Nixvim en el sistema
           nixvim.nixosModules.nixvim
+	  ./home-modules/nixvim.nix
 
-          # Habilitar Home Manager como módulo de NixOS
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
