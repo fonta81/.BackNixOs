@@ -119,6 +119,7 @@ in
     zsh
     ghostty
     yazi
+    spotify
   ];
   
   xdg.terminal-exec = {
