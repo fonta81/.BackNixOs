@@ -154,29 +154,21 @@
 
   # flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # Fin flakes
-
-  # nixvim
-  programs.nixvim = {
-
-  enable = true;
-  colorschemes.catppuccin.enable = true;
-  plugins.lualine.enable = true;
-  plugins.treesitter.enable = true;
-
-  };
-  # Fin nixvim
 
   # iniciar zsh
   programs.zsh.enable = true;
-  # Fin iniciar zsh
 
   # home-manager
   home-manager.users.mteo = import ./home.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "backup";
-  # Fin home-manager
 
+  # Eliminar basura de mas de 15d
+  nix.gc = {
+  automatic = true;
+  dates = "weekly"; 
+  options = "--delete-older-than 15d";
+  };
 
 }
