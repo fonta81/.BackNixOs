@@ -8,9 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lazyvim.url = "github:pfassina/lazyvim-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, lazyvim, ... }@inputs: {
     nixosConfigurations = {
       
       nixos = nixpkgs.lib.nixosSystem {
@@ -24,7 +26,9 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.mteo = import ./home.nix;
+            home-manager.users.mteo = {
+              imports = [ lazyvim.homeManagerModules.default ./home.nix ];
+            };
           }
         ];
       };

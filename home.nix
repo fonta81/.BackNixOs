@@ -11,6 +11,23 @@
   ./home-modules/ghostty.nix
   ];
 
+  home.packages = with pkgs; [
+    git
+    ripgrep
+    fd
+    unzip
+    nodejs_24
+    nerd-fonts.jetbrains-mono
+    gcc
+
+];
+    programs.lazyvim = {
+     enable = true;
+     extras = {
+       lang.nix.enable = true;
+     };
+    };
+
   # programs.home-manager.enable = true;
 
 # Fin
