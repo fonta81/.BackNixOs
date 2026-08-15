@@ -6,7 +6,7 @@
     
     # Opciones de Ghostty
     settings = {
-      # theme = "catppuccin-mocha"; # O el tema que prefieras
+      theme = "dankcolors";
       font-family = "JetBrainsMono Nerd Font";
       font-size = 11;
       
