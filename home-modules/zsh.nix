@@ -52,6 +52,7 @@
       # pokemon
       pk = "pokemon-colorscripts -r --no-title";
       pkk = "clear && pokemon-colorscripts --no-title -n ";
+      pkkex = "clear && pokemon-colorscripts --no-title -n excadrill";
       #NixOs
       ni = "cd /etc/nixos";
       nz = "nvim /etc/nixos/home-modules/zsh.nix"; 
