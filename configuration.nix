@@ -170,6 +170,7 @@
   options = "--delete-older-than 15d";
   };
   # dms:
+  programs.niri.enable = true;
   programs.dms-shell = {
   enable = true;
 
