@@ -159,7 +159,6 @@
   programs.zsh.enable = true;
 
   # home-manager
-  home-manager.users.mteo = import ./home.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "backup";

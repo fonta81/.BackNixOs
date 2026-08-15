@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   home.stateVersion = "26.05";
@@ -6,7 +6,7 @@
   home.homeDirectory = "/home/mteo";
 
   imports = [
-  inputs.dms.homeManagerModules.default
+  inputs.dms.homeModules.dank-material-shell
   ./home-modules/git.nix
   ./home-modules/zsh.nix
   ./home-modules/ghostty.nix
