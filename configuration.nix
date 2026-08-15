@@ -114,6 +114,7 @@
     ghostty
     yazi
     spotify
+    obsidian
   ];
   
   xdg.terminal-exec = {
