@@ -103,7 +103,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [ # qwe
     vim 
     wget
     neovim
@@ -115,6 +115,8 @@
     yazi
     spotify
     obsidian
+    gemini-cli
+    github-copilot-cli
   ];
   
   xdg.terminal-exec = {
