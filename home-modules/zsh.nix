@@ -42,22 +42,27 @@
 
     # Mis Aliases
     shellAliases = {
+      # clear 
       c = "clear";
       cc = "clear && pokemon-colorscripts -r --no-title";
+      # aplicaciones
       y = "yazi";
       gg = "lazygit";
-      ni = "cd /etc/nixos";
-      nz = "nvim /etc/nixos/home-modules/zsh.nix"; 
       n = "nvim";
+      # pokemon
       pk = "pokemon-colorscripts -r --no-title";
       pkk = "clear && pokemon-colorscripts --no-title -n ";
       #NixOs
+      ni = "cd /etc/nixos";
+      nz = "nvim /etc/nixos/home-modules/zsh.nix"; 
       nis = "sudo nixos-rebuild switch"; 
       nisf = "sudo nixos-rebuild switch --flake ."; 
       nit = "sudo nixos-rebuild test"; 
       nitf = "sudo nixos-rebuild test --flake . "; 
       nimrd = "sudo nix-collect-garbage -d";
       nimrd15 = "sudo nix-collect-garbage --delete-older-than 15d";
+      # niri
+      nir = "cd ~/.config/niri/";
     };
 
     initExtra = ''
