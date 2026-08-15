@@ -47,7 +47,7 @@
       y = "yazi";
       gg = "lazygit";
       ni = "cd /etc/nixos";
-      nz = "sudo nvim /etc/nixos/home-modules/zsh.nix"; 
+      nz = "nvim /etc/nixos/home-modules/zsh.nix"; 
       n = "nvim";
       pk = "pokemon-colorscripts -r --no-title";
       pkk = "clear && pokemon-colorscripts --no-title -n ";
