@@ -10,9 +10,14 @@
     };
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, lazyvim, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, lazyvim,dms, ... }@inputs: {
     nixosConfigurations = {
       
       nixos = nixpkgs.lib.nixosSystem {

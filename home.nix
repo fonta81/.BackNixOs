@@ -6,6 +6,7 @@
   home.homeDirectory = "/home/mteo";
 
   imports = [
+  inputs.dms.homeManagerModules.default
   ./home-modules/git.nix
   ./home-modules/zsh.nix
   ./home-modules/ghostty.nix
@@ -27,6 +28,7 @@
        lang.nix.enable = true;
      };
     };
+  programs.dank-material-shell.enable = true;
 
   # programs.home-manager.enable = true;
 

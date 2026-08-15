@@ -170,5 +170,20 @@
   dates = "weekly"; 
   options = "--delete-older-than 15d";
   };
+  # dms:
+  programs.dms-shell = {
+  enable = true;
+
+  systemd = {
+    enable = true;             # servicio systemd para autoarranque
+    restartIfChanged = true;   # reinicia dms.service si cambia la config
+  };
+
+  enableSystemMonitoring = true; # widgets de monitoreo (dgop)
+  enableVPN = true;              # gestión de VPN
+  enableDynamicTheming = true;   # theming según el wallpaper (matugen)
+  enableAudioWavelength = true;  # visualizador de audio (cava)
+  enableCalendarEvents = true;   # integración de calendario (khal)
+};
 
 }
