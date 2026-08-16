@@ -17,14 +17,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, lazyvim,dms, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, lazyvim, dms, ... }@inputs: {
     nixosConfigurations = {
       
-      nixos = nixpkgs.lib.nixosSystem {
+      # --- CONFIGURACIÓN LAPTOP ---
+      laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./hardware-configuration.nix
+          ./system/laptop/hardware-configuration.nix
+          ./system/laptop/default.nix
           ./configuration.nix
 
           home-manager.nixosModules.home-manager
@@ -38,6 +40,28 @@
           }
         ];
       };
+
+      # --- CONFIGURACIÓN PC DE ESCRITORIO ---
+      pc-escritorio = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/pc-escritorio/hardware-configuration.nix
+          .system/PC/default.nix
+          ./configuration.nix                       
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.mteo = {
+              imports = [ lazyvim.homeManagerModules.default ./home.nix ];
+            };
+          }
+        ];
+      };
+
     };
   };
 }
