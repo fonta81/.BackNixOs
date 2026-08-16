@@ -67,7 +67,10 @@
       nir = "cd ~/.config/niri/";
     };
 
-    initExtra = ''
+    # initExtra = ''
+    #   pokemon-colorscripts -r --no-title
+    # '';
+    initContent = ''
       pokemon-colorscripts -r --no-title
     '';
   };
