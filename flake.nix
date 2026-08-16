@@ -46,9 +46,10 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/pc-escritorio/hardware-configuration.nix
-          .system/PC/default.nix
-          ./configuration.nix                       
+          ./system/PC/hardware-configuration.nix
+          ./system/PC/default.nix
+          ./system/PC/nvidia.nix
+          ./configuration.nix
 
           home-manager.nixosModules.home-manager
           {
