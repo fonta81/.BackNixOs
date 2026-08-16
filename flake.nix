@@ -17,7 +17,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, lazyvim, dms, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, lazyvim, dms, ... }@inputs: 
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
     nixosConfigurations = {
       
       # --- CONFIGURACIÓN LAPTOP ---
@@ -64,5 +69,19 @@
       };
 
     };
+      # --- DEVSHELL PARA PROYECTOS GO (bubbletea + oto) ---
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = [
+          pkgs.go
+          pkgs.gopls
+          pkgs.pkg-config
+          pkgs.alsa-lib
+        ];
+
+        shellHook = ''
+          echo "Entorno Go listo (bubbletea + oto)"
+          go version
+        '';
+      };
   };
 }
