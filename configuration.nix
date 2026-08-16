@@ -119,6 +119,7 @@
     obsidian
     antigravity-cli
     github-copilot-cli
+    go
   ];
   
   xdg.terminal-exec = {
