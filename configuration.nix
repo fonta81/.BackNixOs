@@ -80,7 +80,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [ # qwe
+  environment.systemPackages = with pkgs; [ 
     vim 
     wget
     neovim
@@ -96,7 +96,9 @@
     gemini-cli
     github-copilot-cli
     go
-  ];
+    cava
+    lavat
+  ];# qwe
   
   xdg.terminal-exec = {
   enable = true;
