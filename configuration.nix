@@ -118,6 +118,7 @@
     spotify
     obsidian
     antigravity-cli
+    gemini-cli
     github-copilot-cli
     go
   ];
