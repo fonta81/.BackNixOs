@@ -25,6 +25,7 @@
 
     # Only needed for languages not covered by LazyVim extras
     treesitterParsers = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+      git_config
       wgsl      # WebGPU Shading Language
       templ     # Go templ files
     ];
