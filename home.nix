@@ -10,6 +10,7 @@
   ./home-modules/git.nix
   ./home-modules/zsh.nix
   ./home-modules/ghostty.nix
+  ./home-modules/lazyvim.nix
   ];
 
   home.packages = with pkgs; [
@@ -22,12 +23,7 @@
     gcc
 
 ];
-    programs.lazyvim = {
-     enable = true;
-     extras = {
-       lang.nix.enable = true;
-     };
-    };
+
   programs.dank-material-shell.enable = true;
 
   # programs.home-manager.enable = true;
