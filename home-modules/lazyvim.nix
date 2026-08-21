@@ -4,12 +4,18 @@
     enable = true;
 
     extras = {
-      lang.nix.enable = true;
+      lang.nix = {
+        enable = true;
+        installDependencies = true;
+        installRuntimeDependencies = true;
+      };
+
       lang.python = {
         enable = true;
         installDependencies = true;        # Install ruff
         installRuntimeDependencies = true; # Install python3
       };
+
       lang.go = {
         enable = true;
         installDependencies = true;        # Install gopls, gofumpt, etc.
