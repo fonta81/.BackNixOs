@@ -68,6 +68,7 @@
       nimrd = "sudo nix-collect-garbage -d";
       nimrd15 = "sudo nix-collect-garbage --delete-older-than 15d";
       godev="nix develop /etc/nixos/";
+      nixdev="nix develop";
 
       # niri
       nir = "cd ~/.config/niri/";
