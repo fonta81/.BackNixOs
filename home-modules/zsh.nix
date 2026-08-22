@@ -67,10 +67,10 @@
       nitf = "sudo nixos-rebuild test --flake . "; 
       nimrd = "sudo nix-collect-garbage -d";
       nimrd15 = "sudo nix-collect-garbage --delete-older-than 15d";
+      godev="nix develop /etc/nixos/";
 
       # niri
       nir = "cd ~/.config/niri/";
-      godev="nix develop /etc/nixos/";
 
     };
 
