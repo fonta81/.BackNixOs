@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    # vacio
-    ];
+  imports = [];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -113,7 +111,7 @@
   services.openssh.enable = true;
 
 
-  system.stateVersion = "26.05"; 
+  system.stateVersion = "26.05";
 
   # MIS CONFIG mateo
 
