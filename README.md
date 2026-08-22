@@ -2,6 +2,7 @@
 
 ```
 .BackNixOs/
+├── LICENSE
 ├── README.md
 ├── configuration.nix
 ├── flake.lock
@@ -10,6 +11,7 @@
 ├── home-modules/
 │   ├── ghostty.nix
 │   ├── git.nix
+│   ├── lazyvim.nix
 │   └── zsh.nix
 └── system/
     ├── PC/
