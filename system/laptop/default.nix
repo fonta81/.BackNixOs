@@ -9,8 +9,8 @@
     powerOnBoot = true;
     settings = {
         General = {
-          Enable = "Source,Sink,Media,Socket"; # Asegura compatibilidad con audio
-          Experimental = true; # Habilita funciones avanzadas (como ver batería de dispositivos)
+          Enable = "Source,Sink,Media,Socket"; 
+          Experimental = true; 
         };
     };
   };
