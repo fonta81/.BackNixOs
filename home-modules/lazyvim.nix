@@ -27,6 +27,7 @@
     extraPackages = with pkgs; [
       nixd       # Nix LSP
       alejandra  # Nix formatter
+      pyright
     ];
 
     # Only needed for languages not covered by LazyVim extras
