@@ -3,7 +3,7 @@
   programs.lazyvim = {
     enable = true;
 
-    extras = {
+    extras = { # LazyExtras:
       lang.nix = {
         enable = true;
         installDependencies = true;
@@ -21,6 +21,7 @@
         installDependencies = true;        # Install gopls, gofumpt, etc.
         installRuntimeDependencies = true; # Install go compiler
       };
+
     };
 
     # Additional packages (optional)
