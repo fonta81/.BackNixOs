@@ -30,9 +30,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          # ./system/laptop/hardware-configuration.nix
           ./system/hosts/laptop/hardware-configuration.nix
-          # ./system/laptop/default.nix
           ./system/hosts/laptop/default.nix
           ./configuration.nix
 
@@ -53,11 +51,8 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          # ./system/PC/hardware-configuration.nix
           ./system/hosts/PC/hardware-configuration.nix
-          # ./system/PC/default.nix
           ./system/hosts/PC/default.nix
-          # ./system/PC/nvidia.nix
           ./system/hosts/PC/nvidia.nix
           ./configuration.nix
 
