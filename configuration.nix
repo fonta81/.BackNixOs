@@ -141,6 +141,7 @@
   dates = "weekly"; 
   options = "--delete-older-than 15d";
   };
+
   # dank-mateiar-shell:
   programs.niri.enable = true;
   programs.dms-shell = {
@@ -156,6 +157,12 @@
   enableDynamicTheming = true;   # theming según el wallpaper (matugen)
   enableAudioWavelength = true;  # visualizador de audio (cava)
   enableCalendarEvents = true;   # integración de calendario (khal)
+  };
+
+  # Dank Greeter:
+  programs.dank-material-shell.greeter = {
+  enable = true;
+  compositor.name = "niri";
 };
 
 }

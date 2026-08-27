@@ -33,6 +33,7 @@
           ./system/hosts/laptop/hardware-configuration.nix
           ./system/hosts/laptop/default.nix
           ./configuration.nix
+          inputs.dms.nixosModules.greeter
 
           home-manager.nixosModules.home-manager
           {
@@ -58,6 +59,7 @@
           ./system/hosts/PC/default.nix
           ./system/hosts/PC/nvidia.nix
           ./configuration.nix
+          inputs.dms.nixosModules.greeter
 
           home-manager.nixosModules.home-manager
           {
