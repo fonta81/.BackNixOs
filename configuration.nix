@@ -162,7 +162,25 @@
   # Dank Greeter:
   programs.dank-material-shell.greeter = {
   enable = true;
-  compositor.name = "niri";
-};
+
+  compositor = {
+    name = "niri";
+    customConfig = ''
+    '';
+  };
+
+  configHome = "/home/mteo";
+
+  configFiles = [
+    "/home/mteo/.config/DankMaterialShell/settings.json"
+  ];
+
+  logs = {
+    save = true; 
+    path = "/tmp/dms-greeter.log";
+  };
+
+  quickshell.package = pkgs.quickshell;
+  };
 
 }
