@@ -141,7 +141,7 @@
   dates = "weekly"; 
   options = "--delete-older-than 15d";
   };
-  # dms:
+  # dank-mateiar-shell:
   programs.niri.enable = true;
   programs.dms-shell = {
   enable = true;
