@@ -40,7 +40,10 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.mteo = {
-              imports = [ lazyvim.homeManagerModules.default ./home.nix ];
+              imports = [ 
+                  lazyvim.homeManagerModules.default 
+                  ./home.nix 
+                ];
             };
           }
         ];
@@ -62,7 +65,10 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.mteo = {
-              imports = [ lazyvim.homeManagerModules.default ./home.nix ];
+              imports = [ 
+                  lazyvim.homeManagerModules.default 
+                  ./home.nix 
+                ];
             };
           }
         ];
