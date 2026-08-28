@@ -1,10 +1,12 @@
 # Estructura de `.BackNixOs`
 
-```
+```text
 .BackNixOs/
 ├── LICENSE
 ├── README.md
 ├── configuration.nix
+├── core/
+│   └── packages.nix
 ├── flake.lock
 ├── flake.nix
 ├── home.nix
@@ -14,13 +16,14 @@
 │   ├── lazyvim.nix
 │   └── zsh.nix
 └── system/
-    ├── PC/
-    │   ├── default.nix
-    │   ├── hardware-configuration.nix
-    │   └── nvidia.nix
-    └── laptop/
-        ├── default.nix
-        └── hardware-configuration.nix
+    └── hosts/
+        ├── PC/
+        │   ├── default.nix
+        │   ├── hardware-configuration.nix
+        │   └── nvidia.nix
+        └── laptop/
+            ├── default.nix
+            └── hardware-configuration.nix
 ```
 
 ## Descripción rápida
