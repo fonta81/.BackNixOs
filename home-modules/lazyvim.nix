@@ -22,6 +22,12 @@
         installRuntimeDependencies = true; # Install go compiler
       };
 
+      lang.clangd = {
+        enable = true;
+        installDependencies = true;
+        installRuntimeDependencies = true;
+      };
+
     };
 
     # Additional packages (optional)
