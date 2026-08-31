@@ -67,7 +67,6 @@
       nitf = "sudo nixos-rebuild test --flake . "; 
       nimrd = "sudo nix-collect-garbage -d";
       nimrd15 = "sudo nix-collect-garbage --delete-older-than 15d";
-      godev="nix develop /etc/nixos/";
       nixdev="nix develop";
       niche="nix flake check --show-trace";
 
