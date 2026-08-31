@@ -79,19 +79,5 @@
       };
 
     };
-      # --- DEVSHELL PARA PROYECTOS GO (bubbletea + oto) ---
-      devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [
-          pkgs.go
-          pkgs.gopls
-          pkgs.pkg-config
-          pkgs.alsa-lib
-        ];
-
-        shellHook = ''
-          echo "Entorno Go listo (bubbletea + oto)"
-          go version
-        '';
-      };
   };
 }
