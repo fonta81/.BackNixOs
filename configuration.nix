@@ -12,7 +12,7 @@
 
 
 
-  # Enable networking
+  # Enable networking (nmtui && nmcli)
   networking.networkmanager.enable = true;
 
 
