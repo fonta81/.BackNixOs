@@ -36,6 +36,7 @@
           # Configuration:
           ./configuration.nix
           ./core/packages.nix
+          #DankMaterialGreeter
           inputs.dms.nixosModules.greeter
 
           home-manager.nixosModules.home-manager
@@ -65,6 +66,7 @@
           # Configuration:
           ./configuration.nix
           ./core/packages.nix
+          #DankMaterialGreeter
           inputs.dms.nixosModules.greeter
 
           home-manager.nixosModules.home-manager
