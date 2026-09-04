@@ -1,7 +1,7 @@
-# Estructura de `.BackNixOs`
+# Estructura del Proyecto
 
 ```text
-.BackNixOs/
+./
 ├── LICENSE
 ├── README.md
 ├── configuration.nix
@@ -22,6 +22,7 @@
         │   ├── hardware-configuration.nix
         │   └── nvidia.nix
         └── laptop/
+            ├── amd.nix
             ├── default.nix
             └── hardware-configuration.nix
 ```
@@ -30,16 +31,18 @@
 
 | Archivo/Carpeta | Propósito |
 | --- | --- |
-| `flake.nix` | Entry point del flake: define los inputs (nixpkgs, home-manager, lazyvim, dms, etc.) y las dos `nixosConfigurations` (`laptop`, `pc-escritorio`). |
+| `flake.nix` | Entry point del flake: define los inputs y las `nixosConfigurations`. |
 | `flake.lock` | Versiones fijadas de todos los inputs. |
-| `configuration.nix` | Configuración de sistema compartida entre ambos hosts (locale, timezone, xserver/desktopManager, paquetes, etc.). |
-| `core/packages.nix` | Definición y organización de paquetes principales del sistema/core. |
-| `home.nix` | Configuración de home-manager para el usuario `mteo` (importa `home-modules/` y el módulo de DankMaterialShell). |
-| `home-modules/git.nix` | Config de `programs.git` (usuario, email, safe.directory). |
-| `home-modules/zsh.nix` | Config de zsh (aliases, `initExtra`/`initContent`). |
+| `configuration.nix` | Configuración de sistema compartida. |
+| `core/packages.nix` | Definición y organización de paquetes principales. |
+| `home.nix` | Configuración de home-manager para el usuario `mteo`. |
+| `home-modules/git.nix` | Config de `programs.git`. |
+| `home-modules/zsh.nix` | Config de zsh. |
 | `home-modules/ghostty.nix` | Config del terminal Ghostty. |
-| `system/laptop/default.nix` | Config específica del host `laptop` (hostname, hardware particular). |
-| `system/laptop/hardware-configuration.nix` | Config de hardware autogenerada para la laptop. |
-| `system/PC/default.nix` | Config específica del host `pc-escritorio`. |
-| `system/PC/hardware-configuration.nix` | Config de hardware autogenerada para la PC. |
-| `system/PC/nvidia.nix` | Config específica de drivers Nvidia (solo PC). |
+| `home-modules/lazyvim.nix` | Config del editor LazyVim. |
+| `system/hosts/laptop/default.nix` | Config específica del host `laptop`. |
+| `system/hosts/laptop/hardware-configuration.nix` | Config de hardware de la laptop. |
+| `system/hosts/laptop/amd.nix` | Config específica AMD (laptop). |
+| `system/hosts/PC/default.nix` | Config específica del host `PC`. |
+| `system/hosts/PC/hardware-configuration.nix` | Config de hardware de la PC. |
+| `system/hosts/PC/nvidia.nix` | Config de drivers Nvidia (PC). |
