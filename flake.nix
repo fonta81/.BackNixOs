@@ -33,6 +33,7 @@
           # Host:
           ./system/hosts/laptop/hardware-configuration.nix
           ./system/hosts/laptop/default.nix
+          ./system/hosts/laptop/amd.nix
           # Configuration:
           ./configuration.nix
           ./core/packages.nix
