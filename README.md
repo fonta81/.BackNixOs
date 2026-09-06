@@ -5,18 +5,22 @@
 ├── LICENSE
 ├── README.md
 ├── configuration.nix
-├── core/
-│   ├── boot.nix
-│   ├── desktop.nix
-│   ├── dms.nix
-│   ├── locale.nix
-│   ├── networking.nix
-│   ├── nix-settings.nix
-│   ├── packages.nix
-│   └── user.nix
 ├── flake.lock
 ├── flake.nix
 ├── home.nix
+├── core/
+│   ├── config/
+│   │   ├── locale.nix
+│   │   └── packages.nix
+│   ├── services/
+│   │   ├── desktop.nix
+│   │   └── dms.nix
+│   ├── system/
+│   │   ├── boot.nix
+│   │   ├── networking.nix
+│   │   └── nix-settings.nix
+│   └── users/
+│       └── user.nix
 ├── home-modules/
 │   ├── ghostty.nix
 │   ├── git.nix
@@ -41,14 +45,14 @@
 | `flake.nix` | Entry point del flake: define los inputs y las `nixosConfigurations`. |
 | `flake.lock` | Versiones fijadas de todos los inputs. |
 | `configuration.nix` | Configuración de sistema compartida. |
-| `core/boot.nix` | Configuración del cargador de arranque (bootloader). |
-| `core/desktop.nix` | Configuración del entorno de escritorio. |
-| `core/dms.nix` | Configuración del Display Manager. |
-| `core/locale.nix` | Configuración de localización e idioma. |
-| `core/networking.nix` | Configuración de red. |
-| `core/nix-settings.nix` | Ajustes generales de Nix. |
-| `core/packages.nix` | Definición y organización de paquetes principales. |
-| `core/user.nix` | Configuración del usuario. |
+| `core/config/locale.nix` | Configuración de localización e idioma. |
+| `core/config/packages.nix` | Definición y organización de paquetes principales. |
+| `core/services/desktop.nix` | Configuración del entorno de escritorio. |
+| `core/services/dms.nix` | Configuración del Display Manager. |
+| `core/system/boot.nix` | Configuración del cargador de arranque (bootloader). |
+| `core/system/networking.nix` | Configuración de red. |
+| `core/system/nix-settings.nix` | Ajustes generales de Nix. |
+| `core/users/user.nix` | Configuración del usuario. |
 | `home.nix` | Configuración de home-manager para el usuario `mteo`. |
 | `home-modules/git.nix` | Config de `programs.git`. |
 | `home-modules/zsh.nix` | Config de zsh. |
