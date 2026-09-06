@@ -36,7 +36,6 @@
           ./system/hosts/laptop/amd.nix
           # Configuration:
           ./configuration.nix
-          ./core/packages.nix
           #DankMaterialGreeter
           inputs.dms.nixosModules.greeter
 
@@ -66,7 +65,6 @@
           ./system/hosts/PC/nvidia.nix
           # Configuration:
           ./configuration.nix
-          ./core/packages.nix
           #DankMaterialGreeter
           inputs.dms.nixosModules.greeter
 
