@@ -6,7 +6,14 @@
 ├── README.md
 ├── configuration.nix
 ├── core/
-│   └── packages.nix
+│   ├── boot.nix
+│   ├── desktop.nix
+│   ├── dms.nix
+│   ├── locale.nix
+│   ├── networking.nix
+│   ├── nix-settings.nix
+│   ├── packages.nix
+│   └── user.nix
 ├── flake.lock
 ├── flake.nix
 ├── home.nix
@@ -17,14 +24,14 @@
 │   └── zsh.nix
 └── system/
     └── hosts/
-        ├── PC/
+        ├── laptop/
+        │   ├── amd.nix
         │   ├── default.nix
-        │   ├── hardware-configuration.nix
-        │   └── nvidia.nix
-        └── laptop/
-            ├── amd.nix
+        │   └── hardware-configuration.nix
+        └── PC/
             ├── default.nix
-            └── hardware-configuration.nix
+            ├── hardware-configuration.nix
+            └── nvidia.nix
 ```
 
 ## Descripción rápida
@@ -34,7 +41,14 @@
 | `flake.nix` | Entry point del flake: define los inputs y las `nixosConfigurations`. |
 | `flake.lock` | Versiones fijadas de todos los inputs. |
 | `configuration.nix` | Configuración de sistema compartida. |
+| `core/boot.nix` | Configuración del cargador de arranque (bootloader). |
+| `core/desktop.nix` | Configuración del entorno de escritorio. |
+| `core/dms.nix` | Configuración del Display Manager. |
+| `core/locale.nix` | Configuración de localización e idioma. |
+| `core/networking.nix` | Configuración de red. |
+| `core/nix-settings.nix` | Ajustes generales de Nix. |
 | `core/packages.nix` | Definición y organización de paquetes principales. |
+| `core/user.nix` | Configuración del usuario. |
 | `home.nix` | Configuración de home-manager para el usuario `mteo`. |
 | `home-modules/git.nix` | Config de `programs.git`. |
 | `home-modules/zsh.nix` | Config de zsh. |
