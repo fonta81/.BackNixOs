@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ./core/boot.nix
-    ./core/networking.nix
-    ./core/locale.nix
-    ./core/desktop.nix
-    ./core/user.nix
-    ./core/nix-settings.nix
-    ./core/dms.nix
+    ./core/system/boot.nix
+    ./core/system/networking.nix
+    ./core/config/locale.nix
+    ./core/services/desktop.nix
+    ./core/users/user.nix
+    ./core/system/nix-settings.nix
+    ./core/services/dms.nix
   ];
 }
