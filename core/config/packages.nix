@@ -21,14 +21,7 @@
     go
     cava
     lavat
+    xwayland-satellite
   ];
 
-  #Steam
-  programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true;
-  dedicatedServer.openFirewall = true;
-  };
-
-  programs.xwayland.enable = true;
 }
