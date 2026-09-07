@@ -12,6 +12,7 @@
     # services
     ./core/services/desktop.nix
     ./core/services/dms.nix
+    ./core/services/steam.nix
     # user
     ./core/users/user.nix
   ];
