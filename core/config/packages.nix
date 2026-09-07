@@ -21,6 +21,7 @@
     go
     cava
     lavat
+    steam
   ];
 
 }
