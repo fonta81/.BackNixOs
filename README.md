@@ -8,6 +8,11 @@
 ├── flake.lock
 ├── flake.nix
 ├── home.nix
+├── home-modules/
+│   ├── ghostty.nix
+│   ├── git.nix
+│   ├── lazyvim.nix
+│   └── zsh.nix
 ├── core/
 │   ├── config/
 │   │   ├── locale.nix
@@ -21,11 +26,6 @@
 │   │   └── nix-settings.nix
 │   └── users/
 │       └── user.nix
-├── home-modules/
-│   ├── ghostty.nix
-│   ├── git.nix
-│   ├── lazyvim.nix
-│   └── zsh.nix
 └── system/
     └── hosts/
         ├── laptop/
