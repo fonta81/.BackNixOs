@@ -19,7 +19,8 @@
 │   │   └── packages.nix
 │   ├── services/
 │   │   ├── desktop.nix
-│   │   └── dms.nix
+│   │   ├── dms.nix
+│   │   └── steam.nix
 │   ├── system/
 │   │   ├── boot.nix
 │   │   ├── networking.nix
@@ -49,6 +50,7 @@
 | `core/config/packages.nix` | Definición y organización de paquetes principales. |
 | `core/services/desktop.nix` | Configuración del entorno de escritorio. |
 | `core/services/dms.nix` | Configuración del Display Manager. |
+| `core/services/steam.nix` | Configuración de Steam. |
 | `core/system/boot.nix` | Configuración del cargador de arranque (bootloader). |
 | `core/system/networking.nix` | Configuración de red. |
 | `core/system/nix-settings.nix` | Ajustes generales de Nix. |
