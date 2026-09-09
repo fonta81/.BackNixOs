@@ -19,7 +19,7 @@
   };
 
   # Dank Greeter:
-  programs.dank-material-shell.greeter = {
+  programs.dms-greeter = {
     enable = true;
 
     compositor = {

@@ -15,9 +15,14 @@
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    dank-greeter = {
+      url = "github:AvengeMedia/dank-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, lazyvim, dms, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, lazyvim, dms, dank-greeter, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -37,7 +42,7 @@
           # Configuration:
           ./configuration.nix
           #DankMaterialGreeter
-          inputs.dms.nixosModules.greeter
+          inputs.dank-greeter.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {
@@ -66,7 +71,7 @@
           # Configuration:
           ./configuration.nix
           #DankMaterialGreeter
-          inputs.dms.nixosModules.greeter
+          inputs.dank-greeter.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {
