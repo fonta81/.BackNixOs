@@ -69,7 +69,7 @@
       nimrd15 = "sudo nix-collect-garbage --delete-older-than 15d";
       nixdev="nix develop";
       niche="nix flake check --show-trace";
-
+      niup="nix flake update";
       # niri
       nir = "cd ~/.config/niri/";
 
