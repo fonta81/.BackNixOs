@@ -1,9 +1,12 @@
-# Estructura del Proyecto
+# Project Structure
+
+[Español](README.es.md)
 
 ```text
 ./
 ├── LICENSE
 ├── README.md
+├── README.es.md
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
@@ -39,30 +42,30 @@
             └── nvidia.nix
 ```
 
-## Descripción rápida
+## Quick Description
 
-| Archivo/Carpeta | Propósito |
+| File/Folder | Purpose |
 | --- | --- |
-| `flake.nix` | Entry point del flake: define los inputs y las `nixosConfigurations`. |
-| `flake.lock` | Versiones fijadas de todos los inputs. |
-| `configuration.nix` | Configuración de sistema compartida. |
-| `core/config/locale.nix` | Configuración de localización e idioma. |
-| `core/config/packages.nix` | Definición y organización de paquetes principales. |
-| `core/services/desktop.nix` | Configuración del entorno de escritorio. |
-| `core/services/dms.nix` | Configuración del Display Manager. |
-| `core/services/steam.nix` | Configuración de Steam. |
-| `core/system/boot.nix` | Configuración del cargador de arranque (bootloader). |
-| `core/system/networking.nix` | Configuración de red. |
-| `core/system/nix-settings.nix` | Ajustes generales de Nix. |
-| `core/users/user.nix` | Configuración del usuario. |
-| `home.nix` | Configuración de home-manager para el usuario `mteo`. |
-| `home-modules/git.nix` | Config de `programs.git`. |
-| `home-modules/zsh.nix` | Config de zsh. |
-| `home-modules/ghostty.nix` | Config del terminal Ghostty. |
-| `home-modules/lazyvim.nix` | Config del editor LazyVim. |
-| `system/hosts/laptop/default.nix` | Config específica del host `laptop`. |
-| `system/hosts/laptop/hardware-configuration.nix` | Config de hardware de la laptop. |
-| `system/hosts/laptop/amd.nix` | Config específica AMD (laptop). |
-| `system/hosts/PC/default.nix` | Config específica del host `PC`. |
-| `system/hosts/PC/hardware-configuration.nix` | Config de hardware de la PC. |
-| `system/hosts/PC/nvidia.nix` | Config de drivers Nvidia (PC). |
+| `flake.nix` | Flake entry point: defines inputs and `nixosConfigurations`. |
+| `flake.lock` | Pinned versions of all inputs. |
+| `configuration.nix` | Shared system configuration. |
+| `core/config/locale.nix` | Localization and language configuration. |
+| `core/config/packages.nix` | Main package definition and organization. |
+| `core/services/desktop.nix` | Desktop environment configuration. |
+| `core/services/dms.nix` | Display Manager configuration. |
+| `core/services/steam.nix` | Steam configuration. |
+| `core/system/boot.nix` | Bootloader configuration. |
+| `core/system/networking.nix` | Network configuration. |
+| `core/system/nix-settings.nix` | General Nix settings. |
+| `core/users/user.nix` | User configuration. |
+| `home.nix` | Home-manager configuration for user `mteo`. |
+| `home-modules/git.nix` | `programs.git` config. |
+| `home-modules/zsh.nix` | zsh config. |
+| `home-modules/ghostty.nix` | Ghostty terminal config. |
+| `home-modules/lazyvim.nix` | LazyVim editor config. |
+| `system/hosts/laptop/default.nix` | Host specific config for `laptop`. |
+| `system/hosts/laptop/hardware-configuration.nix` | Hardware config for laptop. |
+| `system/hosts/laptop/amd.nix` | Specific AMD config (laptop). |
+| `system/hosts/PC/default.nix` | Host specific config for `PC`. |
+| `system/hosts/PC/hardware-configuration.nix` | Hardware config for PC. |
+| `system/hosts/PC/nvidia.nix` | Nvidia drivers config (PC). |
