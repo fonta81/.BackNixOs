@@ -22,6 +22,7 @@
     cava
     lavat
     xwayland-satellite
+    lutris
   ];
 
 }
