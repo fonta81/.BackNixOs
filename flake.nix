@@ -1,22 +1,23 @@
 {
   description = "Configuración NixOS de mteo";
 
-  inputs = {
+  inputs = { # pkgs-nix
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
+    home-manager = { # home-manager
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # lazyvim
     lazyvim.url = "github:pfassina/lazyvim-nix";
 
-    dms = {
+    dms = { #DankMaterialShell
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    dank-greeter = {
+    dank-greeter = { # DankMaterialGreeter
       url = "github:AvengeMedia/dank-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
