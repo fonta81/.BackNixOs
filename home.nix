@@ -21,12 +21,9 @@
     nodejs_24
     nerd-fonts.jetbrains-mono
     gcc
-
-];
+    ];
 
   programs.dank-material-shell.enable = true;
-
-  # programs.home-manager.enable = true;
 
 # Fin
 }
