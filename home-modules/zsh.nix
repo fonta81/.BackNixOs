@@ -51,6 +51,7 @@
       y = "yazi";
       gg = "lazygit";
       n = "nvim";
+      wifi = "nmtui";
 
       # pokemon
       pk = "pokemon-colorscripts -r --no-title";
