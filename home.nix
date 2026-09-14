@@ -6,7 +6,7 @@
   home.homeDirectory = "/home/mteo";
 
   imports = [
-  ./home-modules/home-packages.nix
+  ./home-modules/packages/home-packages.nix
   inputs.dms.homeModules.dank-material-shell
   ./home-modules/git.nix
   ./home-modules/zsh.nix
