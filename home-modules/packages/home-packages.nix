@@ -3,6 +3,7 @@
 
 {
   home.packages = with pkgs; [
+    # lazyVim
     git
     ripgrep
     fd
@@ -10,6 +11,7 @@
     nodejs_24
     nerd-fonts.jetbrains-mono
     gcc
+    # Mis packages:
     lazygit
     brave
     fastfetch
