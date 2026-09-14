@@ -6,22 +6,13 @@
   home.homeDirectory = "/home/mteo";
 
   imports = [
+  ./home-modules/home-packages.nix
   inputs.dms.homeModules.dank-material-shell
   ./home-modules/git.nix
   ./home-modules/zsh.nix
   ./home-modules/ghostty.nix
   ./home-modules/lazyvim.nix
   ];
-
-  home.packages = with pkgs; [
-    git
-    ripgrep
-    fd
-    unzip
-    nodejs_24
-    nerd-fonts.jetbrains-mono
-    gcc
-    ];
 
   programs.dank-material-shell.enable = true;
 
