@@ -11,6 +11,7 @@
     nodejs_24
     nerd-fonts.jetbrains-mono
     gcc
+
     # Mis packages:
     lazygit
     brave
@@ -26,5 +27,6 @@
     cava
     lavat
     lutris
+
     ];
 }
