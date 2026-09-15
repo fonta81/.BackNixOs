@@ -16,7 +16,6 @@
     lazygit
     brave
     fastfetch
-    ghostty
     yazi
     spotify
     obsidian
