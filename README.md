@@ -15,7 +15,9 @@
 │   ├── ghostty.nix
 │   ├── git.nix
 │   ├── lazyvim.nix
-│   └── zsh.nix
+│   ├── zsh.nix
+│   └── packages/
+│       └── home-packages.nix
 ├── core/
 │   ├── config/
 │   │   ├── locale.nix
@@ -63,6 +65,7 @@
 | `home-modules/zsh.nix` | zsh config. |
 | `home-modules/ghostty.nix` | Ghostty terminal config. |
 | `home-modules/lazyvim.nix` | LazyVim editor config. |
+| `home-modules/packages/home-packages.nix` | Home-manager user packages configuration. |
 | `system/hosts/laptop/default.nix` | Host specific config for `laptop`. |
 | `system/hosts/laptop/hardware-configuration.nix` | Hardware config for laptop. |
 | `system/hosts/laptop/amd.nix` | Specific AMD config (laptop). |
