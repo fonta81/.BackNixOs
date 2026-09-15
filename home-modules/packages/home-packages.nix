@@ -3,14 +3,8 @@
 
 {
   home.packages = with pkgs; [
-    # lazyVim
-    git
-    ripgrep
-    fd
-    unzip
-    nodejs_24
+    # Editor & UI fonts
     nerd-fonts.jetbrains-mono
-    gcc
 
     # Mis packages:
     lazygit
@@ -22,7 +16,6 @@
     antigravity-cli
     gemini-cli
     github-copilot-cli
-    go
     cava
     lavat
     lutris
