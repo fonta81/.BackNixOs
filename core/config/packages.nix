@@ -7,6 +7,8 @@
     wget
     xwayland-satellite
     neovim
+    go
+
   ];
 
 }
