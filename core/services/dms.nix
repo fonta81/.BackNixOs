@@ -11,7 +11,6 @@
       restartIfChanged = true;   # reinicia dms.service si cambia la config
     };
 
-    # enableSystemMonitoring = true; # widgets de monitoreo (dgop)
     enableVPN = true;              # gestión de VPN
     enableDynamicTheming = true;   # theming según el wallpaper (matugen)
     enableAudioWavelength = true;  # visualizador de audio (cava)
