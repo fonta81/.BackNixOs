@@ -19,6 +19,7 @@
     cava
     lavat
     lutris
+    opencode
 
     ];
 }
