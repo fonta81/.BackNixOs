@@ -6,8 +6,11 @@
   home.homeDirectory = "/home/mteo";
 
   imports = [
+  # packages:
   ./home-modules/packages/home-packages.nix
+  # dank-material-shell:
   inputs.dms.homeModules.dank-material-shell
+  # Aplicaciones:
   ./home-modules/git.nix
   ./home-modules/zsh.nix
   ./home-modules/ghostty.nix
