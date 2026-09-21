@@ -26,71 +26,47 @@
   outputs = { self, nixpkgs, home-manager, lazyvim, dms, dank-greeter, ... }@inputs: 
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+
+      # Módulos base compartidos por todos los hosts
+      sharedModules = [
+        ./configuration.nix
+        dank-greeter.nixosModules.default
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.users.mteo = {
+            imports = [ 
+              lazyvim.homeManagerModules.default 
+              ./home.nix 
+            ];
+          };
+        }
+      ];
+
+      # Función constructora para generar configuraciones de host sin duplicar código
+      mkHost = hostModules: nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = sharedModules ++ hostModules;
+      };
     in
     {
-    nixosConfigurations = {
-      
-      # --- CONFIGURACIÓN LAPTOP ---
-      laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          # Host:
+      nixosConfigurations = {
+        # --- CONFIGURACIÓN LAPTOP ---
+        laptop = mkHost [
           ./system/hosts/laptop/hardware-configuration.nix
           ./system/hosts/laptop/default.nix
           ./system/hosts/laptop/amd.nix
-          # Configuration:
-          ./configuration.nix
-          #DankMaterialGreeter
-          inputs.dank-greeter.nixosModules.default
-
-          # home-manager
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.mteo = {
-              imports = [ 
-                  lazyvim.homeManagerModules.default 
-                  ./home.nix 
-                ];
-            };
-          }
         ];
-      };
 
-      # --- CONFIGURACIÓN PC DE ESCRITORIO ---
-      pc-escritorio = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          # Host:
+        # --- CONFIGURACIÓN PC DE ESCRITORIO ---
+        pc-escritorio = mkHost [
           ./system/hosts/PC/hardware-configuration.nix
           ./system/hosts/PC/default.nix
           ./system/hosts/PC/nvidia.nix
-          # Configuration:
-          ./configuration.nix
-          #DankMaterialGreeter
-          inputs.dank-greeter.nixosModules.default
-
-          # home-manager
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.mteo = {
-              imports = [ 
-                  lazyvim.homeManagerModules.default 
-                  ./home.nix 
-                ];
-            };
-          }
         ];
       };
-
     };
-  };
 }
