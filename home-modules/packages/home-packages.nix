@@ -17,6 +17,7 @@
     cava
     lavat
     lutris
+    lazyssh
 
     ];
 }
