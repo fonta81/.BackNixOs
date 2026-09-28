@@ -13,7 +13,6 @@
     spotify
     obsidian
     antigravity-cli
-    gemini-cli
     github-copilot-cli
     cava
     lavat
