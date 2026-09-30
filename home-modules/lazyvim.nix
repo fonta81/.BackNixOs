@@ -4,6 +4,13 @@
     enable = true;
 
     extras = { # LazyExtras:
+
+      lang.typescript = {
+        enable = true;
+        installDependencies = true;
+        installRuntimeDependencies = true;
+      };
+
       lang.nix = {
         enable = true;
         installDependencies = true;
