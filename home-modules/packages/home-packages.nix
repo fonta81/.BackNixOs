@@ -18,6 +18,7 @@
     lavat
     lutris
     lazyssh
+    repomix
 
     ];
 }
