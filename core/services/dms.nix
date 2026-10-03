@@ -7,14 +7,10 @@
     enable = true;
 
     systemd = {
-      enable = true;             # servicio systemd para autoarranque
-      restartIfChanged = true;   # reinicia dms.service si cambia la config
+      enable = true; # servicio systemd para autoarranque
+      restartIfChanged = true; # reinicia dms.service si cambia la config
     };
 
-    enableVPN = true;              # gestión de VPN
-    enableDynamicTheming = true;   # theming según el wallpaper (matugen)
-    enableAudioWavelength = true;  # visualizador de audio (cava)
-    enableCalendarEvents = true;   # integración de calendario (khal)
   };
 
   # Dank Greeter:
@@ -23,8 +19,7 @@
 
     compositor = {
       name = "niri";
-      customConfig = ''
-      '';
+      customConfig = "";
     };
 
     configHome = "/home/mteo";
@@ -34,7 +29,7 @@
     ];
 
     logs = {
-      save = true; 
+      save = true;
       path = "/tmp/dms-greeter.log";
     };
 
