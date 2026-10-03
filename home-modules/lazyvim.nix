@@ -48,7 +48,7 @@
       lua-language-server
       nil
       stylua
-      nixfmt-rfc-style # o nixfmt
+      nixfmt
       gotools          # Incluye goimports
       shfmt
       tree-sitter
