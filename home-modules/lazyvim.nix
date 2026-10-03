@@ -46,28 +46,38 @@
 
     # Additional packages (optional)
     extraPackages = with pkgs; [
+      # Nix tooling & LSPs
       nixd
-      alejandra
-      pyright
-      vtsls
-      typescript-language-server
-      typescript
-      lua-language-server
       nil
+      alejandra
+      nixfmt-rfc-style # o nixfmt según tu versión
+      # Python & Lua
+      pyright
+      python3
+      lua-language-server
       stylua
-      nixfmt
-      gotools # Incluye goimports
+      # Web & WebDev (TypeScript, JS, HTML)
+      vtsls
+      typescript
+      typescript-language-server
+      # Go & Shell
+      gotools
       shfmt
+      # Rust
+      cargo
+      rustc
+      rust-analyzer
+      rustfmt
+      clippy
+      # General utilities & tools
       tree-sitter
       ast-grep
-      python3
     ];
 
-    # Only needed for languages not covered by LazyVim extras
     treesitterParsers = with pkgs.vimPlugins.nvim-treesitter-parsers; [
       git_config
-      wgsl # WebGPU Shading Language
-      templ # Go templ files
+      wgsl
+      templ
     ];
   };
 }
