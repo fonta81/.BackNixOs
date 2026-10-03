@@ -1,9 +1,16 @@
-{config,pkgs,...}:
+{ config, pkgs, ... }:
 {
   programs.lazyvim = {
     enable = true;
 
-    extras = { # LazyExtras:
+    extras = {
+      # LazyExtras:
+
+      lang.rust = {
+        enable = true;
+        installDependencies = true;
+        installRuntimeDependencies = true;
+      };
 
       lang.typescript = {
         enable = true;
@@ -19,13 +26,13 @@
 
       lang.python = {
         enable = true;
-        installDependencies = true;        # Install ruff
+        installDependencies = true; # Install ruff
         installRuntimeDependencies = true; # Install python3
       };
 
       lang.go = {
         enable = true;
-        installDependencies = true;        # Install gopls, gofumpt, etc.
+        installDependencies = true; # Install gopls, gofumpt, etc.
         installRuntimeDependencies = true; # Install go compiler
       };
 
@@ -49,7 +56,7 @@
       nil
       stylua
       nixfmt
-      gotools          # Incluye goimports
+      gotools # Incluye goimports
       shfmt
       tree-sitter
       ast-grep
@@ -59,8 +66,8 @@
     # Only needed for languages not covered by LazyVim extras
     treesitterParsers = with pkgs.vimPlugins.nvim-treesitter-parsers; [
       git_config
-      wgsl      # WebGPU Shading Language
-      templ     # Go templ files
+      wgsl # WebGPU Shading Language
+      templ # Go templ files
     ];
   };
 }
