@@ -39,12 +39,21 @@
 
     # Additional packages (optional)
     extraPackages = with pkgs; [
-      nixd       # Nix LSP
-      alejandra  # Nix formatter
+      nixd
+      alejandra
       pyright
       vtsls
       typescript-language-server
       typescript
+      lua-language-server
+      nil
+      stylua
+      nixfmt-rfc-style # o nixfmt
+      gotools          # Incluye goimports
+      shfmt
+      tree-sitter
+      ast-grep
+      python3
     ];
 
     # Only needed for languages not covered by LazyVim extras
