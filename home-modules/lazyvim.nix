@@ -42,6 +42,9 @@
       nixd       # Nix LSP
       alejandra  # Nix formatter
       pyright
+      vtsls
+      typescript-language-server
+      typescript
     ];
 
     # Only needed for languages not covered by LazyVim extras
