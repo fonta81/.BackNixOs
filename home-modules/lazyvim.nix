@@ -50,7 +50,7 @@
       nixd
       nil
       alejandra
-      nixfmt-rfc-style # o nixfmt según tu versión
+      nixfmt
       # Python & Lua
       pyright
       python3
