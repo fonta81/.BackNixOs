@@ -1,4 +1,9 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
@@ -19,6 +24,7 @@
     lutris
     lazyssh
     repomix
+    nodejs
 
-    ];
+  ];
 }
