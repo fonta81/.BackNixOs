@@ -25,6 +25,7 @@
     lazyssh
     repomix
     nodejs
+    opencode
 
   ];
 }
