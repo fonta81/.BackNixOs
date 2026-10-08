@@ -12,8 +12,7 @@
 
     # Mis packages:
     lazygit
-    brave
-    fastfetch
+    brave    
     yazi
     spotify
     obsidian
