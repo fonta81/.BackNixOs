@@ -25,6 +25,7 @@
     repomix
     nodejs
     opencode
+    lazysql
 
   ];
 }
