@@ -26,6 +26,7 @@
     nodejs
     opencode
     lazysql
+    lazydocker
 
   ];
 }
