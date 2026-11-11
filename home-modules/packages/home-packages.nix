@@ -27,6 +27,7 @@
     opencode
     lazysql
     lazydocker
+    vscode
 
   ];
 }
