@@ -28,6 +28,7 @@
     lazysql
     lazydocker
     vscode
+    obs-studio
 
   ];
 }
