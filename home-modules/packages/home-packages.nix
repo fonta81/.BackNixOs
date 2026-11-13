@@ -29,6 +29,7 @@
     lazydocker
     vscode
     obs-studio
+    htop
 
   ];
 }
