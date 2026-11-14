@@ -30,6 +30,7 @@
     vscode
     obs-studio
     htop
+    wine
 
   ];
 }
