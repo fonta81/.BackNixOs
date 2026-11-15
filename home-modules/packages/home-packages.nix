@@ -31,6 +31,7 @@
     obs-studio
     htop
     wine
+    davinci-resolve
 
   ];
 }
