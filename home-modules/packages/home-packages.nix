@@ -32,6 +32,7 @@
     htop
     wine
     davinci-resolve
+    qbittorrent
 
   ];
 }
