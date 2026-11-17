@@ -33,6 +33,7 @@
     wine
     davinci-resolve
     qbittorrent
+    ripgrep
 
   ];
 }
