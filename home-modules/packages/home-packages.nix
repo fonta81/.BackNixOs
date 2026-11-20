@@ -34,6 +34,7 @@
     davinci-resolve
     qbittorrent
     ripgrep
+    bat
 
   ];
 }
