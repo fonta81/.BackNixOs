@@ -67,6 +67,11 @@
           ./system/hosts/PC/default.nix
           ./system/hosts/PC/nvidia.nix
         ];
+
+        # --- HOST GENÉRICO (sin hardware-config, para pruebas) ---
+        generic = mkHost [
+          ./system/hosts/generic/default.nix
+        ];
       };
     };
 }
