@@ -11,30 +11,30 @@
     nerd-fonts.jetbrains-mono
 
     # Mis packages:
-    lazygit
-    brave    
-    yazi
-    spotify
-    obsidian
     antigravity-cli
-    github-copilot-cli
+    bat
+    brave
     cava
+    davinci-resolve
+    github-copilot-cli
+    htop
     lavat
-    lutris
     lazyssh
-    repomix
-    nodejs
-    opencode
     lazysql
     lazydocker
-    vscode
+    lazygit
+    lutris
+    nodejs
+    obsidian
     obs-studio
-    htop
-    wine
-    davinci-resolve
+    opencode
     qbittorrent
+    repomix
     ripgrep
-    bat
+    spotify
+    vscode
+    wine
+    yazi
 
   ];
 }
