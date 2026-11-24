@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  networking.hostName = "generic-host";
+  networking.hostName = "generic";
 
   services.dbus.enable = true;
 
