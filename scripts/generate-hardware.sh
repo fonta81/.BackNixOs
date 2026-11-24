@@ -14,18 +14,19 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 TARGET_DIR="$REPO_ROOT/system/hosts/generic"
 TARGET_FILE="$TARGET_DIR/hardware-configuration.nix"
-TMP_FILE="/tmp/hardware-config-generic.nix"
+TMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TMP_DIR"' EXIT
 
 echo "Generando configuración de hardware para: generic"
 
 # Generar en la máquina actual (donde está el hardware real)
-sudo nixos-generate-config --file "$TMP_FILE"
+sudo nixos-generate-config --dir "$TMP_DIR"
 
 # Crear directorio del host en el repositorio
 mkdir -p "$TARGET_DIR"
 
 # Copiar al repositorio
-cp "$TMP_FILE" "$TARGET_FILE"
+cp "$TMP_DIR/hardware-configuration.nix" "$TARGET_FILE"
 
 echo ""
 echo "✓ Copiado a: $TARGET_FILE"

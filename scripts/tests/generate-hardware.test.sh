@@ -3,7 +3,7 @@
 set -euo pipefail
 
 TEST_ROOT="$(mktemp -d)"
-trap 'rm -rf "$TEST_ROOT"; rm -f /tmp/hardware-config-generic.nix' EXIT
+trap 'rm -rf "$TEST_ROOT"' EXIT
 
 mkdir -p "$TEST_ROOT/scripts" "$TEST_ROOT/mock-bin"
 cp scripts/generate-hardware.sh "$TEST_ROOT/scripts/generate-hardware.sh"
@@ -11,14 +11,22 @@ cp scripts/generate-hardware.sh "$TEST_ROOT/scripts/generate-hardware.sh"
 cat > "$TEST_ROOT/mock-bin/nixos-generate-config" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-target="${@: -1}"
-printf 'generated hardware\n' > "$target"
+if [ "$#" -ne 2 ] || [ "$1" != "--dir" ]; then
+  echo "unrecognized argument: ${1:-}" >&2
+  exit 2
+fi
+
+mkdir -p "$2"
+printf 'generated hardware\n' > "$2/hardware-configuration.nix"
+printf 'generated main config\n' > "$2/configuration.nix"
 EOF
 
 cat > "$TEST_ROOT/mock-bin/sudo" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
-nixos-generate-config "$@"
+command="$1"
+shift
+"$command" "$@"
 EOF
 
 chmod +x \
