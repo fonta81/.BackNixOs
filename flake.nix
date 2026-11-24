@@ -71,6 +71,7 @@
         # --- HOST GENÉRICO (sin hardware-config, para pruebas) ---
         generic = mkHost [
           ./system/hosts/generic/default.nix
+          ./system/hosts/generic/hardware-configuration.nix
         ];
       };
     };
