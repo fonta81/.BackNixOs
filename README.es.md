@@ -7,6 +7,7 @@
 ├── LICENSE
 ├── README.md
 ├── README.es.md
+├── .gitignore
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
@@ -32,8 +33,14 @@
 │   │   └── nix-settings.nix
 │   └── users/
 │       └── user.nix
+├── scripts/
+│   ├── generate-hardware.sh
+│   └── tests/
+│       └── generate-hardware.test.sh
 └── system/
     └── hosts/
+        ├── generic/
+        │   └── default.nix
         ├── laptop/
         │   ├── amd.nix
         │   ├── default.nix
@@ -51,6 +58,7 @@
 | `flake.nix` | Entry point del flake: define los inputs y las `nixosConfigurations`. |
 | `flake.lock` | Versiones fijadas de todos los inputs. |
 | `configuration.nix` | Configuración de sistema compartida. |
+| `.gitignore` | Archivos y carpetas ignorados por Git. |
 | `core/config/locale.nix` | Configuración de localización e idioma. |
 | `core/config/packages.nix` | Definición y organización de paquetes principales. |
 | `core/services/desktop.nix` | Configuración del entorno de escritorio. |
@@ -66,6 +74,9 @@
 | `home-modules/ghostty.nix` | Config del terminal Ghostty. |
 | `home-modules/lazyvim.nix` | Config del editor LazyVim. |
 | `home-modules/packages/home-packages.nix` | Configuración de paquetes de usuario en home-manager. |
+| `scripts/generate-hardware.sh` | Genera `hardware-configuration.nix` para el host `generic` en la máquina destino. |
+| `scripts/tests/generate-hardware.test.sh` | Prueba automatizada del script de generación de hardware. |
+| `system/hosts/generic/default.nix` | Configuración base del host genérico de pruebas. |
 | `system/hosts/laptop/default.nix` | Config específica del host `laptop`. |
 | `system/hosts/laptop/hardware-configuration.nix` | Config de hardware de la laptop. |
 | `system/hosts/laptop/amd.nix` | Config específica AMD (laptop). |
